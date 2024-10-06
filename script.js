@@ -2,7 +2,7 @@
 
 function searchHotels() {
     alert("Redirecting to the Search Hotels page...");
-    window.location.href = "search.html"; // Redirect to search hotels page
+    window.location.href = "hotel.html"; // Redirect to search hotels page
 }
 
 function viewBookings() {

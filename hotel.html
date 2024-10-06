@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Filter & Suggestions</title>
+    <link rel="stylesheet" href="hotel-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Your Perfect Stay</h1>
+        
+        <!-- Hotel Filters -->
+        <div class="filters">
+            <h3>Filter Hotels</h3>
+            <div class="filter-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter location">
+            </div>
+            <div class="filter-group">
+                <label for="priceRange">Price Range</label>
+                <select id="priceRange">
+                    <option value="all">All</option>
+                    <option value="budget">Low</option>
+                    <option value="mid-range">Mid-Range</option>
+                    <option value="luxury">Luxury</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="rating">Rating</label>
+                <select id="rating">
+                    <option value="all">All Ratings</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                </select>
+            </div>
+
+            <!-- Button Group for Search and Clear -->
+            <div class="button-group">
+                <button onclick="filterHotels()">Search Hotels</button>
+                <button onclick="clearFilters()">Clear Filters</button>
+            </div>
+        </div>
+
+
+        <!-- Hotel Suggestions -->
+        <div class="suggestions">
+            <h3>Suggested Hotels</h3>
+            <div id="hotelList" class="hotel-list">
+                <!-- Hotel Cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="hotel-script.js"></script>
+</body>
+</html>
