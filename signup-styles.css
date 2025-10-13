@@ -1,0 +1,118 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #signupBox {
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  p.text-primary {
+    font-size: 1.2rem;
+    color: #007bff;
+  }
+  
+  .inputsForm input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+  
+  .inputsForm input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  #signupBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #signupBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .loginText p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .loginText a {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .loginText a:hover {
+    color: #0056b3;
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 768px) {
+    #signupBox {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    p.text-primary {
+      font-size: 1rem;
+    }
+  
+    .inputsForm input {
+      font-size: 0.9rem;
+    }
+  
+    #signupBtn {
+      font-size: 1rem;
+    }
+  
+    .loginText p,
+    .loginText a {
+      font-size: 0.9rem;
+    }
+  }
+  
+  

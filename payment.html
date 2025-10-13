@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Payment</title>
+    <link rel="stylesheet" href="paymentstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Hotel Booking Payment</h2>
+        <p>Complete your booking for <strong>Selected Hotel</strong></p>
+
+        <!-- Payment Options Heading -->
+        <h3 class="payment-options-heading">Payment Options</h3>
+
+        <form action="" method="post">
+            <!-- Payment Options -->
+            <div class="payment-options">
+                <input type="radio" name="payment-method" id="credit-card" checked>
+                <label for="credit-card"><i class="fa fa-credit-card"></i> Credit Card</label>
+                
+                <input type="radio" name="payment-method" id="debit-card">
+                <label for="debit-card"><i class="fa fa-cc-visa"></i> Debit Card</label>
+                
+                <input type="radio" name="payment-method" id="upi">
+                <label for="upi"><i class="fa fa-mobile"></i> UPI</label>
+                
+                <input type="radio" name="payment-method" id="paypal">
+                <label for="paypal"><i class="fa fa-cc-paypal"></i> PayPal</label>
+            </div>
+
+            <!-- Booking Details -->
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Your Name" required>
+                <i class="fa fa-user icon"></i>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Your Email" required>
+                <i class="fa fa-envelope icon"></i>
+            </div>
+
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Your Phone Number" required>
+                <i class="fa fa-phone icon"></i>
+            </div>
+
+            <!-- Booking Amount -->
+            <div class="input-group">
+                <label>Total Amount</label>
+                <input type="number" placeholder="Enter Amount" required>
+                <i class="fa fa-money icon"></i>
+            </div>
+
+            <!-- Pay Now Button -->
+            <button type="submit" class="pay-button">Pay Now</button>
+        </form>
+    </div>
+
+    <!-- JavaScript to toggle visibility for UPI ID field -->
+    <script>
+        document.querySelectorAll('input[name="payment-method"]').forEach((elem) => {
+            elem.addEventListener("change", function() {
+                // Add any payment-specific behavior if needed
+            });
+        });
+    </script>
+</body>
+</html>

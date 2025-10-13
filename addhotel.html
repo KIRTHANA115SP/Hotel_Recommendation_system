@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Hotel</title>
+    <link rel="stylesheet" href="styleh.css">
+</head>
+<body>
+    <h1>Add a New Hotel</h1>
+    
+    <!-- Form for adding hotel details -->
+    <form id="add-hotel-form">
+        <label for="name">Hotel Name:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" required><br><br>
+
+        <label for="rating">Rating (1-5):</label>
+        <input type="number" id="rating" min="1" max="5" required><br><br>
+
+        <label for="amenities">Amenities (comma separated):</label>
+        <input type="text" id="amenities" required><br><br>
+
+        <button type="submit">Add Hotel</button>
+    </form>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('add-hotel-form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent form from submitting normally
+
+            // Get hotel details from the form
+            const name = document.getElementById('name').value;
+            const location = document.getElementById('location').value;
+            const price = parseFloat(document.getElementById('price').value);
+            const rating = parseInt(document.getElementById('rating').value);
+            const amenities = document.getElementById('amenities').value.split(",").map(amenity => amenity.trim());
+            const image = `https://picsum.photos/200/300?random=${Math.floor(Math.random() * 100)}`;
+
+            if (name && location && price && !isNaN(price) && rating >= 1 && rating <= 5 && amenities.length > 0) {
+                // Create new hotel object
+                const newHotel = {
+                    id: Date.now(), // Using timestamp as a unique ID
+                    name,
+                    location,
+                    price,
+                    rating,
+                    amenities,
+                    image,
+                };
+
+                // Retrieve the current hotels from localStorage or use an empty array
+                let hotels = JSON.parse(localStorage.getItem('hotels')) || [];
+
+                // Add the new hotel to the array
+                hotels.push(newHotel);
+
+                // Save updated hotels array to localStorage
+                localStorage.setItem('hotels', JSON.stringify(hotels));
+
+                // Redirect back to the hotel list page
+                window.location.href = 'index.html';
+            } else {
+                alert("Please enter valid hotel details.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>User Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="profile-styles.css" />
+  </head>
+  <body>
+    <main class="py-5">
+      <section class="py-5">
+        <div class="container">
+          <div class="profile-box text-center p-4 p-md-5 rounded-2">
+            <!-- Logout Button positioned at the top right -->
+            <div class="logout-btn">
+              <a href="login.html" class="btn btn-danger">Logout</a>
+            </div>
+            <h1 class="my-4">User Profile</h1>
+            <div class="profile-info">
+              <div class="profile-image">
+                <img src="https://picsum.photos/200/300?random=16" alt="User Profile Picture" class="rounded-circle" />
+              </div>
+              <div class="profile-details mt-4">
+                <h3 id="profileName">Panbu</h3>
+                <p class="text-muted" id="profileEmail">panbu@gmail.com</p>
+                <!-- Added additional user details -->
+                <table class="table table-bordered mt-3">
+                  <tr>
+                    <th>Age</th>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <th>Address</th>
+                    <td>123 Main St, Springfield, IL</td>
+                  </tr>
+                  <tr>
+                    <th>Email</th>
+                    <td>panbu@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <th>Phone Number</th>
+                    <td>1234567890</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            
+            <!-- User Booking Details Table -->
+            <div class="booking-details mt-5">
+              <h4>Booking History</h4>
+              <table class="table table-bordered mt-3">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Hotel Name</th>
+                    <th>Booking Date</th>
+                    <th>Stay Duration (nights)</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>JKlnn</td>
+                    <td>2024-10-15</td>
+                    <td>5</td>
+                    <td>Completed</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>MR mansion</td>
+                    <td>2024-08-20</td>
+                    <td>3</td>
+                    <td>Completed</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>VANTARA SUITEs</td>
+                    <td>2024-07-10</td>
+                    <td>7</td>
+                    <td>Completed</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Regency Sameera Vellore</td>
+                    <td>2024-06-01</td>
+                    <td>4</td>
+                    <td>Completed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="bootstrap.bundle.js"></script>
+  </body>
+</html>
